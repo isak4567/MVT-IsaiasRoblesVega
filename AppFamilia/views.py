@@ -23,3 +23,36 @@ def lista_familia (request):
     lista = Familia.objects.all()
 
     return render (request, "list_familia.html", {"lista_familia": lista})
+
+
+def vista_prueba (request):
+
+    return HttpResponse("vista prueba")
+
+def vista_prueba1html (request):
+
+    return render(request, "prueba1.html")
+
+def vista_prueba2html (request):
+
+    return render(request, "prueba2.html")
+
+def vista_prueba3html (request):
+
+    return render(request, "prueba3.html")
+
+def vista_prueba4html (request):
+
+    return render(request, "prueba4.html")
+
+def vista_prueba5html (request):
+
+    if request.method == 'post':
+
+        fam1 = Familia(nombre = request.post['nombre del input'], edad = int(request.post['nombre del input']), fecha = request.post['nombre del input'])
+        
+        fam1.save()
+
+
+
+    return render(request, "prueba5.html")

@@ -1,0 +1,80 @@
+{% extends 'prueba1.html' %}
+
+{% load static %}
+
+
+{% block contenidoMain %}
+<main class="letraColorCeleste letraFrankRuhlLibre">
+    <!-- section formulario abre -->
+    <section class="formulario">
+
+        <form action="{% url 'Contacto' %}" method="post" class="container d-flex flex-column justify-content-center align-items-center backgroundColorAzul">{% csrf token %}
+
+            <h1 class="container text-center"> Contacto </h1>
+
+            <div class="bootFormulario container-fluid row">
+
+                <div class="contactoSeccionIzquierda col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group d-flex flex-column">
+                        <label for="nombre-completo">Nombre completo: </label>
+                        <input type="text" name="nombre-completo" placeholder="Nombre completo">
+                    </div>
+                    <div class="form-group d-flex flex-column">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group d-flex flex-column">
+                        <label for="telefono">Teléfono/s: </label>
+                        <input type="tel" name="telefono" placeholder="Tel 38154549 ej.">
+                    </div>
+                    <div class="form-group d-flex flex-column">
+                        <label for="tipoDeConsulta">¿Que tipo de consulta? </label>
+                        <select name="tipoDeConsulta">
+                            <option value="Judicial">Judicial.</option>
+                            <option value="Laboral">Laboral.</option>
+                            <option value="Amistosa">Amistosa.</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="contactoSeccionDerecha col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group d-flex flex-column">
+                        <label for="consulta">Tu Consulta: </label>
+                        <textarea name="consulta" id="consulta" cols="30"
+                            rows="8">Diga los detalles de su consulta</textarea>
+                    </div>
+                    <p>Rellena el formulario para que podamos contactar contigo. Nos pondremos en contacto contigo con la mayor brevedad posible.</p>
+
+                    <div class="form-group condicionesDeServicio">
+                        <input type="checkbox" name="terminosDeServicio">
+                        <label for="terminosDeServicio">
+                            Terminos de <a class="letraColorCeleste" href="https://www.ohchr.org/EN/UDHR/Documents/UDHR_Translations/spn.pdf">Servicios</a>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <input type="submit" value="Enviar" id="submit" class=" submit">
+
+        </form>
+
+    </section>
+    <!-- section formulario cierra -->
+    <!-- section direccion abre -->
+    <section class="container  text-center direccion letraColorAzul">
+
+        <h2>Nuestra oficina</h2>
+        <div style="width: 100%">
+            <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=80%25&amp;height=400&amp;hl=es&amp;q=Les%20Rambles,%201%20Barcelona,%20Spain+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                    href="https://www.gps.ie/car-satnav-gps/">Sat Navs</a></iframe>
+        </div>
+
+    </section>
+    <!-- section direccion cierra -->
+</main>
+{% endblock %}

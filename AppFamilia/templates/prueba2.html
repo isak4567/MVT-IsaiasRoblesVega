@@ -1,0 +1,84 @@
+{% extends 'prueba1.html' %}
+
+{% load static %}
+
+
+{% block contenidoMain %}
+<main>
+        <!-- section servicio1 abre -->
+        <section class="container-fluid servicio servicio1 animate__animated animate__fadeInDown">
+
+            <div class="contenedorServicio row">
+
+                <div class="col-lg-6 col-md-6 d-flex flex-column align-items-end servicioSeccionIzquierda">
+                    <img src="../Img/servicio1.jpg" alt="algo con respecto al servicio1">
+                    <a href="./contacto.html">
+                        <button class="btn botonServicio letraColorCeleste">Realizar consulta</button>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 servicioSeccionDerecha letraColorAzul">
+
+                    <div class="tituloAsesoramiento">
+                        <h1 class="letraFrankRuhlLibre">Indemnización laboral</h1>
+                        <p class="letraRubik">En caso de despido sin justa causa, suspensiones, trabajo en negro, acoso
+                            laboral, vacaciones y licencias, cambio de modalidad de trabajo.</p>
+                    </div>
+
+                    <div class="cuerpoAsesoramiento">
+
+                        <h2 class="acoso letraFrankRuhlLibre">Acoso laboral</h2>
+                        <p class="letraRubik">• Asesoramiento sobre violencia laboral y acoso sexual.</p>
+
+                        <h3 class="letraFrankRuhlLibre">Por despido sin expresión de causa o justificación</h3>
+                        <p class="letraRubik">• Asesoramiento en el pago por el trabajo realizado.</p>
+                        <p class="letraRubik">• Asesoramiento en las condiciones según el tipo de contrato.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- section servicio1 cierra -->
+        <!-- section servicio2 abre -->
+        <section class="container-fluid servicio servicio2">
+
+            <div class="contenedorServicio row">
+
+                <div class="col-lg-6 col-md-6 d-flex flex-column align-items-end servicioSeccionIzquierda">
+                    <img src="../Img/servicio2.jpg" alt="algo con respecto al servicio2">
+                    <a href="./contacto.html">
+                        <button class="btn botonServicio letraColorCeleste">Realizar consulta</button>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 servicioSeccionDerecha letraColorAzul">
+
+                    <div class="tituloAsesoramiento">
+
+                        <h2 class="letraFrankRuhlLibre">Demanda accidentes</h2>
+                        <p class="letraRubik">Si sufrió un accidente de trabajo o padece una enfermedad a causa de su trabajo.</p>
+
+                    </div>
+
+                    <div class="cuerpoAsesoramiento">
+
+                        <h3 class="letraFrankRuhlLibre">Accidente de trabajo</h3>
+                        <p class="letraRubik">• Asesoramiento en los trámites medicos y juridicos sobre ello.</p>
+
+                        <h3 class="letraFrankRuhlLibre">Enfermedad</h3>
+                        <p class="letraRubik">• Asesoramiento sobre compesancion por daño fisico o psicologico causado por el trabajos.</p>
+                        <p class="letraRubik">• Asesoramiento en pedida de Amparo.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- section servicio2 cierra -->
+</main>
+{% endblock %}

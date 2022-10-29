@@ -1,0 +1,610 @@
+/*  import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Rubik:wght@300&display=swap');
+/*  import fonts */
+
+/* Variables */
+$titleFont: 'Frank Ruhl Libre',
+serif;
+$normalFont: 'Rubik',
+sans-serif;
+$colorAzul: rgb(40, 69, 131);
+$colorCeleste: rgb(92, 195, 255);
+$colorAquamarine: aquamarine;
+
+/* SCSS*/
+
+/*  Reseteador - prncipio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  Reseteador - fin */
+
+
+/* Mixin - principio */
+@mixin fontBold ($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+/* Mixin - fin */
+
+body {
+    background-color: rgba(174, 199, 191, 0.966);
+}
+
+/*  Seccion Family Fonts - principio */
+.letraFrankRuhlLibre {
+    font-family: $titleFont;
+}
+
+.letraRubik {
+    font-family: $normalFont;
+}
+
+/*  Seccion Family Fonts - fin */
+
+/*  Seccion Colores - principio */
+.backgroundColorAzul {
+    background-color: $colorAzul;
+}
+
+.backgroundColorCeleste {
+    background-color: rgba(136, 211, 255, 0.493);
+}
+
+.letraColorAzul {
+    color: $colorAzul;
+}
+
+.letraColorCeleste {
+    color: $colorCeleste;
+}
+
+/*  Seccion Colores - fin */
+
+/* Header - principio */
+.encabezado {
+    border-bottom: 3px groove black;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+}
+
+.logoSolo {
+    width: 100px;
+    margin: 4% auto;
+}
+
+.navegador ul {
+    list-style: none;
+
+    li {
+        border-right: 2px outset $colorCeleste;
+        padding-right: 4%;
+        font-size: 1.5em;
+
+        a {
+            color: $colorCeleste;
+
+            &:hover {
+                color: $colorAquamarine;
+            }
+        }
+    }
+}
+
+/* Header - fin */
+
+main {
+    margin: 165px 0px 65px 0px;
+}
+
+/* Pagina Index - principio */
+.portadaEstudioAbogados {
+    height: 800px;
+    width: 100%;
+    background-image: url(../Img/background-abogado.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+}
+
+.colorFondo {
+    background-color: rgba(127, 255, 212, 0.452);
+    height: 800px;
+    width: 100%;
+}
+
+.contenedorPortadaEstudioAbogados {
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(127, 255, 212, 0.466), rgba(127, 255, 212, 0));
+
+    div {
+        background: linear-gradient(270deg, rgba(0, 255, 255, 0.308), rgba(127, 255, 212, 0));
+        padding: 2% 0%;
+        border-radius: 1.7em;
+    }
+
+    h1 {
+        font-weight: 800;
+    }
+
+    p {
+        margin: 2% 8% 4% 8%;
+        font-weight: 700;
+    }
+
+    button {
+        font-size: 1em;
+
+        &:hover {
+            color: $colorAquamarine;
+        }
+        &:focus {
+            background-color: rgb(23, 44, 90);
+        }
+    }
+}
+
+.servicios h2 {
+    @include fontBold(3em, 700);
+    padding: 2em;
+    margin-bottom: 6%;
+}
+
+.ContenedorServicios {
+    margin: 0% 2%;
+}
+
+.contenedorServiciosItem {
+    margin: 3% 1.2%;
+    padding: 0%;
+
+    div {
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;
+        min-width: 300px;
+    }
+
+    h3 {
+        background-color: rgba(40, 69, 131, 0.918);
+        height: auto;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+/* Maps - principio */
+$servicios: (
+    contenedorServiciosItem1: url(../Img/indemnizacion-laboral.jpg),
+    contenedorServiciosItem2: url(../Img/indemnizacion-discapacidad.jpg),
+    contenedorServiciosItem3: url(../Img/indemnizacion-fallecimiento.jpg),
+    contenedorServiciosItem4: url(../Img/Indemnizacion-familia.jpg),
+);
+
+@each $contenedorServiciosItem, $bgImage in $servicios {
+    .#{$contenedorServiciosItem} div {
+        background-image: $bgImage;
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.1);
+            color: $colorAquamarine;
+            box-shadow: 0px 0px 10px 5px rgba(0, 153, 255, 0.404);
+        }
+    }
+}
+/* Maps - fin */
+
+/* Pagina Index - fin */
+
+/* Pagina Servicios - principio */
+.servicio {
+    margin-top: 4%;
+    border-bottom: 3px outset rgba(0, 0, 0, 0.377);
+    border-radius: 120px;
+    box-shadow: 0px 30px 25px 5px rgba(0, 0, 0, 0.26);
+
+    h1,h2 {
+        @include fontBold(2.5em, 700);
+    }
+
+    h3, .acoso {
+        @include fontBold(2em, 700);
+    }
+
+    p {
+        @include fontBold(1.5em, 800);
+    }
+}
+
+.contenedorServicio {
+    padding-bottom: 4%;
+}
+
+.servicio1 {
+    margin-top: 10%;
+    margin-bottom: 4%;
+}
+
+.servicioSeccionIzquierda {
+    img {
+        min-height: 300px;
+        width: 95%;
+    }
+}
+
+.botonServicio {
+    background-color: $colorAzul;
+    margin-top: 20%;
+    border: 2px groove rgba(0, 0, 0, 0.363);
+    font-size: 1.5em;
+
+    &:hover {
+        color: $colorAquamarine;
+    }
+    &:focus {
+        background-color: rgb(23, 44, 90);
+    }
+}
+
+/* Pagina Servicios - fin */
+
+/* Pagina QuienesSomos - principio */
+.estudioAbogacia {
+    height: auto;
+    margin: 6px;
+
+    h1 {
+        text-align: center;
+        padding: 0.5em;
+        @include fontBold(2.5em, 700);
+    }
+
+    p {
+        text-align: justify;
+        font-family: 'Lucida Sans Unicode', sans-serif ;
+        margin: 0.8em 0.5em 2em 0.5em;
+        @include fontBold(1.2em, 900);
+        span {
+            font-weight: 900;
+            color: #00277a;
+        }
+    }
+}
+
+.abogados {
+    height: auto;
+    width: 100%;
+}
+
+.contenedorAbogados {
+    display: flex;
+    height: 80%;
+    width: 90%;
+    box-shadow: 15px -15px 5px 5px rgba(0, 0, 0, 0.329);
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedorAbogados1 {
+    background-image: url(../Img/chino1.jpeg);
+    margin-bottom: 6%;
+}
+
+.contenedorAbogados2 {
+    background-image: url(../Img/chino2.jpg);
+}
+
+.descripciónAbogado {
+    background-color: rgba(52, 84, 87, 0.945);
+    min-height: 300px;
+    width: 30%;
+    z-index: 2;
+
+    h2,
+    p {
+        text-align: center;
+        color: $colorCeleste;
+    }
+
+    h2 {
+        font-family: $titleFont;
+        font-size: 1.8em;
+    }
+
+    p {
+        font-family: $normalFont;
+        font-size: 1.2em;
+    }
+}
+
+.caracteristicasAbogado {
+    opacity: 0;
+    min-height: 300px;
+    width: 70%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.767);
+    transition: all 0.5s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.caracteristicasAbogadoTexto{
+    opacity: 0;
+    height: 100%;
+
+    p {
+        padding: 0% 10%;
+        text-align: center;
+        color: #007bff;
+    }
+
+    &:hover {
+        animation-name: apareciendo;
+        animation-duration: 1.5s;
+        opacity: 1;
+    }
+    a:hover {
+        color: $colorCeleste;
+    }
+
+}
+
+@keyframes apareciendo {
+    0% {
+        opacity: 0;
+        transform: translate(0, 30%);
+    }
+    40% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+/* Pagina QuienesSomos - fin */
+
+/* Pagina PreguntasFrecuentes - principio */
+.preguntasTitulo {
+    width: 100%;
+    text-align: center;
+    padding: 60px;
+    margin-bottom: 65px;
+    @include fontBold(2em, 700);
+}
+
+.preguntas {
+    width: 95%;
+    height: 100%;
+    margin: 0% 2.5%;
+    margin-bottom: 65px;
+    border: 4px groove black;
+    padding: 0%;
+}
+
+.categoriaDePreguntas {
+    padding: 0em;
+    border: 5px double black;
+    width: 100%;
+    margin: 0;
+
+    h2 {
+        font-size: 2em;
+        margin-left: 2%;
+    }
+
+    img {
+        height: 60px;
+        width: 60px;
+        margin: 2%;
+        border: 3px outset black;
+        padding: 1em;
+    }
+}
+
+.cuerpoPreguntas {
+    width: 100%;
+    height: auto;
+    border: 2px groove black;
+
+    h3 {
+        padding: 4%;
+        font: 1.5em $titleFont;
+    }
+
+    p {
+        font: 1em $normalFont;
+        font-weight: 700;
+        text-align: center;
+        padding: 2%;
+    }
+}
+
+.acomodarBoton {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.botonConsulta {
+    @extend .botonServicio;
+    color: $colorCeleste; 
+}
+
+/* Pagina PreguntasFrecuentes - fin */
+
+/* Pagina Contacto - principio */
+.formulario {
+    margin-bottom: 4%;
+
+    form {
+        padding: 4%;
+        border-radius: 1.7em;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.472);
+        border: 2px groove rgba(0, 0, 0, 0.459);
+
+        .submit {
+            width: 60%;
+        }
+    }
+}
+
+input,
+select,
+textarea {
+    padding: 4px;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 0px 2px 2px #5cc3ff;
+    }
+}
+
+/* Pagina Contacto - fin */
+
+/* Footer - principio */
+.contenedorCreditos {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.logoEntero {
+    width: 180px;
+}
+
+.redesSociales {
+    align-items: center;
+    a {
+        margin: 6px;
+    }
+}
+
+.faceIcon,
+.instaIcon {
+    width: 70px;
+    height: 100%;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Footer - fin */
+
+@media only screen and (max-width: 767px) {
+
+    /* Pagina Index - principio */
+    .contenedorPortadaEstudioAbogados {
+        font-size: 1.5em;
+
+        p {
+            margin: 2% 2% 4% 2%;
+        }
+    }
+
+    /* Pagina Index - fin */
+
+    /* Pagina Servicios - principio */
+    .servicios h2 {
+        padding: 1.5em;
+        font-size: 2.5em;
+        margin-bottom: 6%;
+    }
+
+    .servicio {
+        border-radius: 90px;
+    }
+
+    .servicioSeccionIzquierda {
+        margin-bottom: 8%;
+    }
+
+    .servicioSeccionIzquierda img {
+        width: 99%;
+    }
+
+    .servicio2 {
+        margin-top: 10%;
+    }
+
+    .contenedorServicio {
+        padding-bottom: 8%;
+    }
+
+    /* Pagina Servicios - fin */
+    /* QuienesSomos - principio */
+    .estudioAbogacia p {
+        font-size: 1em;
+    }
+    
+    .contenedorAbogados {
+        box-shadow: 10px -10px 3px 3px rgba(0, 0, 0, 0.329);
+    }
+
+    .descripciónAbogado {
+        min-height: 260px;
+
+        h2 {
+            font-size: 1.4em;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+    }
+
+    /* QuienesSomos - fin */
+
+    /* Contacto */
+    .formulario {
+        margin-top: 30%;
+    }
+
+    /* Footer */
+    .contenedorCreditos div {
+        margin: 20px auto;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    .navegador ul li {
+        font-size: 1.25em;
+    }
+
+    /* Servicios */
+    .servicio1 {
+        margin-top: 30%;
+    }
+
+    /* QuienesSomos */
+    .quienesSomos {
+        margin-top: 24%;
+    }
+
+    .estudioAbogacia p {
+        font-size: 1em;
+    }
+
+    .descripciónAbogado h2 {
+        font-size: 1.5em;
+    }
+
+    .descripciónAbogado p {
+        font-size: 1em;
+    }
+
+    /* Contacto */
+    .formulario {
+        margin-top: 30%;
+    }
+}

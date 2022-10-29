@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indemnizar</title>
+    <meta name="description" content="Indemnizar es un estudio juridico especializado en conseguir compensaciónes.">
+    <meta name="keywords" content="Indemnizar, Abogados, Estudio juridico, Indemnización laboral, Despidos, Indemnización discapacidad, Indemnización familiar">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link  href="{% static './css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- logo mas nav en header abre -->
+    <header class="container-fluid encabezado backgroundColorAzul">
+
+        <div class="row">
+
+            <a class="col-md-12 col-lg-2 d-flex justify-content-center" href="#">
+                <img src="./Img/logoSolo.PNG" alt="logo" class="logoSolo">
+            </a>
+            <!-- Navegador abre -->
+            <nav
+                class="col-md-12 col-lg-10 navbar navbar-expand-md navegador d-flex justify-content-center align-items-center letraFrankRuhlLibre navbar-light">
+                <!-- Boton hamburguesa abre -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Boton hamburguesa cierra -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <ul class="navbar-nav col-lg-12 d-flex justify-content-between align-items-center ">
+                        <li class="nav-item"><a href="{% url 'Inicio' %}">Inicio</a></li>
+                        <li class="nav-item"><a href="{% url 'Servicios' %}">Servicios</a></li>
+                        <li class="nav-item"><a href="{% url 'Quienes' %}">Quienes somos</a></li>
+                        <li class="nav-item"><a href="{% url 'Preguntas' %}">Preguntas frecuentes</a></li>
+                        <li class="nav-item"><a href="{% url 'Contacto' %}">Contacto</a></li>
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- Navegador cierra -->
+        </div>
+
+    </header>
+    <!-- logo mas nav en header cierra -->
+    <hr>
+    <!-- main abre -->
+    {% block contenidoMain %}
+
+    <main>
+        <!-- section estudio abogacia abre -->
+        <section class="container-fluid portadaEstudioAbogados">
+
+            <div class="colorFondo backgroundColorCeleste">
+
+                <div class=" col-lg-7 col-sm-9 d-flex justify-content-center align-items-center contenedorPortadaEstudioAbogados animate__animated animate__fadeInLeft">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="letraFrankRuhlLibre letraColorAzul">Estudio Indemnizar</h1>
+                        <p class="letraRubik letraColorAzul">Despacho multidisciplinar, con especialidad en Derecho de accidentes y obtención de indemizacion en toda situacion priorizando la proteccion del cliente.</p>
+                        <a href="./paginas/quienessomos.html">
+                            <button class="btn letraColorCeleste backgroundColorAzul">Conócenos</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- section estudio abogacia cierra -->
+        <hr>
+        <!-- section servicios abre -->
+        <section class="servicios letraFrankRuhlLibre letraColorCeleste">
+
+            <h2 class="backgroundColorAzul text-center serviciosTitulo">Servicios</h2>
+
+            <div class="row text-center ContenedorServicios">
+
+                <div class="col-md contenedorServiciosItem contenedorServiciosItem1">
+                    <div class="d-flex align-items-end">
+                        <h3>Indemnización laboral</h3>
+                    </div>
+                </div>
+
+                <div class="col-sm contenedorServiciosItem contenedorServiciosItem2">
+                    <div class="d-flex align-items-end">
+                        <h3>Indemnización por discapacidad</h3>
+                    </div>
+                </div>
+
+                <div class="col-sm contenedorServiciosItem contenedorServiciosItem3">
+                    <div class="d-flex align-items-end">
+                        <h3>Indemnización por fallecimiento</h3>
+                    </div>
+                </div>
+
+                <div class="col-sm contenedorServiciosItem contenedorServiciosItem4">
+                    <div class="d-flex align-items-end">
+                        <h3>Indemnizaciones por daños en las relaciones familiares</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- section servicios cierra -->
+    </main>
+
+    {% endblock %}
+    <!-- main cierra -->
+    <hr>
+    <!-- footer abre -->
+    <footer>
+
+        <div class="container-fluid backgroundColorAzul letraColorCeleste letraFrankRuhlLibre creditos">
+            <div class="row contenedorCreditos">
+                <div class="col-sm d-flex justify-content-center">
+                    <a href="#">
+                        <img src="./Img/logoEntero.jpeg" alt="logoEntero" class="logoEntero">
+                    </a>
+                </div>
+
+                <div class="col-sm text-center creador">
+                    <h2> Creador </h2>
+                    <h3> Isaias Robles Vega </h3>
+                </div>
+
+                <div class="col-sm d-flex justify-content-center redesSociales">
+                   <a href="https://www.youtube.com/watch?v=Kq4NeqOXZGc" target="_blank">
+                        <img src="./Img/face-icon.png" alt="face icon" class="faceIcon">
+                   </a>
+
+                   <a href="https://www.youtube.com/watch?v=Wmro8-thWKE" target="_blank">
+                        <img src="./Img/insta-icon.png" alt="insta icon" class="instaIcon">
+                   </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- footer cierra -->
+
+    <!-- Scripts abre-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+    <!-- Scripts cierra-->
+
+</body>
+
+</html>

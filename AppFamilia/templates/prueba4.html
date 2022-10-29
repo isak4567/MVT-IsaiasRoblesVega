@@ -1,0 +1,112 @@
+{% extends 'prueba1.html' %}
+
+{% load static %}
+
+
+{% block contenidoMain %}
+<main>
+
+    <h1 class="preguntasTitulo letraColorAzul letraFrankRuhlLibre animate__animated animate__fadeIn">Listado con las
+        preguntas más frecuentes para
+        aclarar sus dudas</h1>
+    <!-- section categoria1 abre -->
+    <div class="container-fluid preguntasFrecuentesAcomodador">
+        <section class="row">
+
+            <div class="col-md d-flex flex-column preguntas letraColorCeleste backgroundColorAzul accordion"
+                id="accordion1">
+
+                <div class="letraColorCeleste backgroundColorAzul">
+                    <div class="row justify-content-between align-items-center categoriaDePreguntas"
+                        id="headingOne">
+
+                        <h2 class="letraFrankRuhlLibre col-8">
+                            Consultas Laborales
+                        </h2>
+
+                        <button class="btn btn-link col-3" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <img src="../Img/flecha-abajo.png" alt="flecha para abajo">
+                        </button>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordion1">
+
+                        <div class="cuerpoPreguntas">
+
+                            <h3>Diferencia entre contrato laboral y prestación de servicios</h3>
+                            <p>Las características esenciales del contrato laboral son la remuneración, la
+                                prestación personal de un servicio, la subordinación y el horario si se
+                                encuentras estas caracterizas es un contrato laboral per si al contrario estamos
+                                prestando un servicio sin tener una vinculación es un contrato por prestación de
+                                servicios.</p>
+
+                        </div>
+
+                        <div class="cuerpoPreguntas">
+
+                            <h3>¿Qué responsabilidad tiene el empleador en un accidente laboral?</h3>
+                            <p>Las obligaciones de un empleador en un contrato laboral está el suministro de la
+                                dotación, las capacitaciones periódicas, y la implementación del sistema de
+                                gestión de prevención de riesgos.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md d-flex flex-column preguntas letraColorCeleste backgroundColorAzul accordion"
+            id="accordion2">
+
+              <div class="letraColorCeleste backgroundColorAzul">
+                <div class="row justify-content-between align-items-center categoriaDePreguntas"
+                    id="headingTwo">
+
+                    <h2 class="letraFrankRuhlLibre col-8">
+                        Preguntas basicas
+                    </h2>
+
+                    <button class="btn btn-link col-3" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        <img src="../Img/flecha-abajo.png" alt="flecha para abajo">
+                    </button>
+                </div>
+
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                    data-parent="#accordion2">
+
+                    <div class="cuerpoPreguntas">
+
+                        <h3>¿Por que Eligirnos?</h3>
+                        <p>Sabemos que las personas que nos visitan ponen en nosotros su confianza. Por ello, nos
+                            esmeramos para que puedan quedar satisfechos con los resultados obtenidos después de cada
+                            proceso. Visítenos pronto, estamos para solucionar sus problemas.</p>
+
+                    </div>
+
+                    <div class="cuerpoPreguntas">
+
+                        <h3>¿Que tipo de casos atendemos?</h3>
+                        <p>-Indemnización. -Despidos. -Accidentes de trabajo. -Daños y Perjuicios. -Laboral.
+                            -Empresarial. -Maltrato Laboral. -Acoso Laboral. -Renuncias forzadas. -Alimentos. -Ámbito
+                            Familiar.</p>
+
+                    </div>
+                </div>
+              </div>
+
+            </div>
+
+        </section>
+    </div>
+    <!-- section categoria2 cierra -->
+
+    <div class="acomodarBoton">
+        <a href="./contacto.html">
+            <button class="btn botonConsulta">Realizar Consulta</button>
+        </a>
+    </div>
+
+</main>
+{% endblock %}
